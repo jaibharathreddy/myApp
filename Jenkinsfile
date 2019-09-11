@@ -3,6 +3,7 @@ node {
         checkout scm
     }
 
+
     stage("Prepare") {
         echo "add dependancies"
         sh 'npm install'
@@ -17,3 +18,4 @@ node {
         echo "build platforms"
         sh 'cordova build android'
     }
+}
