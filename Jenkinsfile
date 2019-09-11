@@ -10,8 +10,6 @@ node {
         sh "npm audit fix --force"
         sh "cordova platform rm android"
         sh "cordova platform add android@8.0.0"
-        sh "cordova prepare android"
-        sh 'cordova build android'
     }
 
      stage("build platform") {
