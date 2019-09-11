@@ -8,8 +8,10 @@ node {
         echo "add dependancies"
         sh 'npm install'
         sh "npm audit fix --force"
-        sh "cordova platform rm android"
-        sh "cordova platform add android@8.0.0"
+        sh "ionic cordova platform rm android"
+        echo "removed platform"
+        sh "ionic cordova platform add android"
+        echo "added platform"
     }
 
      stage("build platform") {
