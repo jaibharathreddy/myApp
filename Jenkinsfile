@@ -7,7 +7,5 @@ node {
         echo "node modules setup"
         sh "npm install"
         sh "npm audit fix --force"
-    }
-
-    
+    }    
 }
