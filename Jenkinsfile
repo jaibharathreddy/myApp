@@ -1,11 +1,10 @@
 node {
-    stage("Checkout") {
+    stage('checkout') {
         checkout scm
     }
 
-
-    stage("Prepare") {
-        echo "add dependancies"
+    stage ('npm install') {
+        echo "node modules setup"
         sh "npm install"
         sh "npm audit fix --force"
     }
