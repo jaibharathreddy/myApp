@@ -1,11 +1,17 @@
-node {
-    stage('checkout') {
-        checkout scm
-    }
+pipeline {
+   stages {
+      stage('NPM Setup') {
+      steps {
+         sh 'npm install'
+      }
+   }
 
-    stage ('npm install') {
-        echo "node modules setup"
-        sh "npm install"
-        sh "npm audit fix --force"
-    }    
+   stage('Android Build') {
+   steps {
+      sh 'ionic cordova build android'
+   }
+  }
+ }
 }
+
+
