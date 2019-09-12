@@ -5,19 +5,19 @@ node {
 
     stage ('npm install') {
         echo "node modules setup"
-        bat "npm install"
-        bat "cordova -v"
-        bat "ionic -v"
-        bat "npm audit fix --force"
+        sh "npm install"
+        sh "cordova -v"
+        sh "ionic -v"
+        sh "npm audit fix --force"
     }
     stage ('platform adding') {
         echo "adding started" 
-        bat "ionic cordova platform remove android"   
-        bat "ionic cordova platform add android"
+        sh "ionic cordova platform remove android"   
+        sh "ionic cordova platform add android"
     }
     stage ('platform build') {
         echo "build started"
-        bat  "ionic cordova build android"
+        sh  "ionic cordova build android"
     }
 }
 
