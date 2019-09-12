@@ -8,7 +8,7 @@ node {
         bat "npm install"
         bat "npm audit fix --force"
         bat "npm install -g cordova@8.1.2"
-        bat "npm install -g cordova@5.2.3"
+        bat "npm install -g ionic@5.2.3"
     }
     stage ('build') {
         echo "build started"
