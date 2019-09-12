@@ -12,12 +12,12 @@ node {
     }
     stage ('platform adding') {
         echo "adding started" 
-        bat  "cordova platform remove android"   
-        bat "cordova platform add android"
+        bat "ionic cordova platform remove android"   
+        bat "ionic cordova platform add android"
     }
     stage ('platform build') {
         echo "build started"
-        bat  "cordova build android"
+        bat  "ionic cordova build android"
     }
 }
 
