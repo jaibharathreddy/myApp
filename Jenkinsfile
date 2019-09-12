@@ -10,9 +10,9 @@ node {
     }
     stage ('platform adding') {
         echo "adding started" 
-        sh  "ionic cordova platform remove android"
-        sh  "ionic cordova resources"
+        sh  "ionic cordova platform remove android"   
         sh  "ionic cordova platform add android@8.0.0"
+        sh  "ionic cordova resources"
     }
     stage ('platform build') {
         echo "build started"
