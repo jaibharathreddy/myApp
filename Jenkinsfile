@@ -10,7 +10,7 @@ node {
     }
     stage ('build') {
         echo "build started"
-        sh "(cd .. && ionic cordova platform add android)"
+        sh  "ionic cordova platform add android"
     }
 }
 
