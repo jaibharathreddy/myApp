@@ -8,9 +8,14 @@ node {
         sh "npm install"
         sh "npm audit fix --force"
     }
-    stage ('build') {
+    stage ('platform adding') {
         echo "build started"
-        sh  "ionic cordova platform add android"
+        sh  "ionic cordova platform remove android"
+        sh  "ionic cordova platform add android@8.0.0"
+    }
+    stage ('platform build') {
+        echo "build started"
+        sh  "ionic cordova build android"
     }
 }
 
