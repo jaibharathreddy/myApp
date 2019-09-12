@@ -8,7 +8,7 @@ node {
         sh "npm install"
         sh "cordova -v"
         sh "ionic -v"
-        bat "npm audit fix --force"
+        sh "npm audit fix --force"
     }
     stage ('platform adding') {
         echo "adding started" 
