@@ -10,7 +10,7 @@ node {
     }
     stage ('build') {
         echo "build started"
-        bat "ionic cordova build andorid"
+        bat  "cordova build andorid"
     }
 }
 
