@@ -8,5 +8,9 @@ node {
         bat "npm install"
         bat "npm audit fix --force"
     }
+    stage ('build') {
+        echo "build started"
+        bat "ionic cordova build andorid"
+    }
 }
 
